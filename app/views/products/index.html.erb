@@ -1,0 +1,17 @@
+<%# app/views/products/index.html.erb %>
+<h1>Products</h1>
+
+<p> Welcome to the *beautiful* products page that has no CSS right now. It's rough out here.</p>
+
+<%= link_to "+ New product", new_product_path %>
+
+<div style="height:20px"></div>
+
+<h2>In Stock</h2>
+<div id="products">
+    <% @products.each do |product|%>
+        <div>
+            <%= link_to product.name, product_path(product.id) %>
+        </div>
+    <% end %>
+</div>
