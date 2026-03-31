@@ -3,7 +3,8 @@
 
 <p> Welcome to the *beautiful* products page that has no CSS right now. It's rough out here.</p>
 
-<%= link_to "+ New product", new_product_path %>
+<%= link_to "+ New product", new_product_path if authenticated? %>
+<%= link_to "Login to add products", new_session_path unless authenticated? %>
 
 <div style="height:20px"></div>
 
